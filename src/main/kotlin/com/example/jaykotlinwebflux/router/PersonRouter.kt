@@ -12,8 +12,8 @@ class PersonRouter {
     fun personHandlerRouter(personHandler: PersonHandler) = router {
         "/persons".nest {
             GET("/", personHandler::findAll)
-            POST("/", personHandler::save)
-            GET("/{id}", personHandler::findById)
+//            POST("/", personHandler::save)
+//            GET("/{id}", personHandler::findById)
         }
     }
 

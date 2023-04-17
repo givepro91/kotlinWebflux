@@ -11,8 +11,8 @@ class PersonRouter {
     @Bean
     fun personHandlerRouter(personHandler: PersonHandler) = router {
         "/persons".nest {
-            GET("/", personHandler::findAll)
-//            POST("/", personHandler::save)
+            GET("", personHandler::findAll)
+            POST("", personHandler::save)
 //            GET("/{id}", personHandler::findById)
         }
     }

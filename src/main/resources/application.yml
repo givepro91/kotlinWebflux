@@ -11,3 +11,6 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 server:
   port: 9000
+logging:
+  level:
+    root: debug

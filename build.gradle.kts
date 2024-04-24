@@ -24,6 +24,15 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+    implementation("org.springframework.boot:spring-boot-starter-security")
+//    implementation("org.springframework.security:spring-security-config:6.2.4")
+//    implementation("org.springframework.security:spring-security-core:6.2.4")
+
+    implementation("io.jsonwebtoken:jjwt-api:0.12.5")
+    implementation("io.jsonwebtoken:jjwt-impl:0.12.5")
+    implementation("io.jsonwebtoken:jjwt-jackson:0.12.5")
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
 }

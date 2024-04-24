@@ -1,6 +1,7 @@
 package com.example.jaykotlinwebflux.entity
 
-import com.example.jaykotlinwebflux.utils.utcZone
+import com.example.jaykotlinwebflux.dto.PersonInfoDto
+import com.example.jaykotlinwebflux.utils.kstZone
 import org.hibernate.annotations.CreationTimestamp
 import java.time.LocalDateTime
 import javax.persistence.Entity
@@ -16,6 +17,19 @@ class Person {
 
     var name: String = ""
 
+    var email: String = ""
+
+    var password: String = ""
+
     @CreationTimestamp
-    var createdAt: LocalDateTime = LocalDateTime.now(utcZone)
+    var createdAt: LocalDateTime = LocalDateTime.now(kstZone)
+}
+
+fun convertPersonToPersonInfo(person: Person): PersonInfoDto {
+    return PersonInfoDto(
+        person.id,
+        person.name,
+        person.email,
+        person.createdAt
+    )
 }

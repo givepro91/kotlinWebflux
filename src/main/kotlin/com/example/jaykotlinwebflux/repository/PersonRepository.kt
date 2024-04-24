@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository
 interface PersonRepository: CrudRepository<Person, Long> {
     fun save(person: Person): Person
     fun findByName(name: String): Person
+    fun findByEmail(email: String): Person?
 }

@@ -14,6 +14,7 @@ class PersonRouter {
             GET("", personHandler::findAll)
             POST("", personHandler::save)
 //            GET("/{id}", personHandler::findById)
+            POST("/authenticate", personHandler::createAuthenticationToken)
         }
     }
 
